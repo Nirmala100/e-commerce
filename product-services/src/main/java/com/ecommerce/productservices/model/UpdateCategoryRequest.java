@@ -1,8 +1,12 @@
 package com.ecommerce.productservices.model;
 
+import javax.validation.constraints.NotBlank;
+
 public class UpdateCategoryRequest {
     private Long id;
+    @NotBlank(message = "Category name cannot be blank")
     private String categoryName;
+    @NotBlank(message = "Category description cannot be blank")
     private String categoryDescription;
 
     public UpdateCategoryRequest() {
